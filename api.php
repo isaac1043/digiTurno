@@ -10,8 +10,7 @@ switch ($metodo) {
                     $consulta = "SELECT tipo_turnos.tt_nombre AS modul, datos_digi.dd_turno FROM tipo_turnos INNER JOIN datos_digi ON tipo_turnos.tt_id = datos_digi.tt_id WHERE datos_digi.dd_atendido = 0";
                     $conect = mysqli_query($apto, $consulta);
                     $coleccion = mysqli_fetch_array($conect);
-                    echo json_decode($coleccion)
-
+                    echo json_decode($coleccion);
                 } else if ($OP == 'secret') {
                     $consulta = "SELECT dd_fecha_ing AS fecha, dd_hora_ing, dd_turno, dd_atendido FROM datos_digi WHERE dd_atendido = 0";
                 }
