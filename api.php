@@ -1,6 +1,7 @@
 <?php
 include ('bd/conectar.php');
 $metodo = $_SERVER['REQUEST_METHOD'];
+//Prueba
 switch ($metodo) {
         case 'GET':
             if (isset($_GET['OP']) && $_GET['OP'] != '') {
